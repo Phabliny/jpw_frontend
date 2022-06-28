@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box; 
+    font-size: clamp(1em, 0.1em + 1vw, 1.5em);
+}
+header h2 {
+    font-size: clamp(0.2rem, 1rem + 0.75vw, 2rem);
+  }
+header{
+    background-image: url('../../public/img/fundo_header.png');
+    padding: 0;
+    width: auto;
+    height: auto;
+    margin: 0;
+    max-width: 100%;
+    text-align: center;
+    background-size: cover;    
+}
+header div {
+    background-color: rgba(255, 255, 255, 0.9);
+    margin-left: auto;
+    margin-right: auto;
+}
+.container {
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+}
+main h1{
+    font-family: 'Playfair Display SC', serif;
+    font-size: clamp(0.1rem, 1rem + 2.1vw, 2rem);
+    text-align: center;
+}
+main h2 {
+    font-family: 'Dosis', sans-serif;
+    color:#8A8A8A;
+    font-size: clamp(0.1rem, 0.5rem + 2vw, 1.2rem);
+    text-align: center;
+}
+.caixa{
+    width: 80vw;
+    margin-top: 1.5vw;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid blue;
+    display: flex;
+    flex-direction: column;
+}
+.negrito {
+    font-weight: bolder;
+}
+.foto_wellington {
+    border-radius: 100%;
+}
+
+p {
+    font-family: 'Barlow', sans-serif;
+    color: black;
+}
+.img_marca {
+    width: 30vw;
+    margin: 0 0 5vw 0;
+    max-width: 50%;
+}
+.texto-carrosel{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9);
+}
+.img_carrosel{
+    position: relative;
+    width: 150%;
+    border: 1px solid black;
+}
+.div-img{
+    border: 1px solid black;
+}
+.botao {
+    margin: 0px;
+    width: 80px;
+    height: 30px;
+    color: white;
+    background-color: #DA811A;
+    border:none;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+input {
+    margin-bottom: 3vw !important;
+}
+.botao:hover {
+    cursor: pointer;
+}
+footer{
+    background-color: orange;
+}
+.caixa_footer{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.img_van{
+    width: 100%;
+}
+.elemento_footer {
+    display: flex;
+    flex-direction: row;
+}
+.na_coluna {
+    display: flex;
+    flex-direction: column;
+}
+.na_coluna h5 {
+    margin: 0;
+    padding: 0;
+}
+.textos_footer {
+    padding-left: 2.5vw;
+}
+.icone {
+    width: clamp(0.8rem, 0.7rem + 2vw, 2.7rem); 
+    margin-bottom: 20px;
+}
+.textos_footer h5{
+    font-size: clamp(0.3rem, 0.7rem + 0.30vw, 1.3rem);
+}
+.textos_footer p{
+    font-size: clamp(0.1rem, 0.6rem + 0.30vw, 1rem);
+}
+.fim_footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+.fim_footer p{
+    color: white;
+}
+.none{
+    display: flex;    
+}
+.logozap {
+    float: right;
+    position: fixed;
+    width: clamp(1rem, 2rem + 1.75vw, 5rem);
+    margin-right: 4%;
+    margin-bottom: 11%;
+    bottom:0;
+    right:0;
+    clear:right
+}
+iframe {
+    position: static;
+}
+.fundo_produtos {
+    background-color: rgba(253, 214, 169, 0.4)
+}
+.fundo_loja_movel {
+    background-color: rgba(253, 214, 169, 0.7)
+}
+@media screen and (min-width: 600px) {
+    .botao {
+        display: inline-block;
+    }
+    .mapa {
+        width:100%;
+    }
+    .logozap {
+        margin-right: 3%;
+        margin-bottom: 4%;
+    }
+}
+
+@media screen and (min-width:990px) {
+    .container {
+        padding-top: 10vh;
+        padding-bottom: 10vh;
+    }
+    .caixa{
+        width: 55vw;
+        flex-direction: row;
+    }
+    .none{
+        display: none;
+    }
+    .foto_wellington {
+        border-radius: 0%;
+    }
+    .marcas{
+        width: 55vw;
+        margin-top: 1.5vw;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .img_marca {
+        width: 14vw;
+        margin-bottom: 1vw;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+    input {
+        display: inline-block;
+        margin-right: 1.2vw !important;
+        width: 20vw;
+        margin-bottom: 3vw !important;
+    }
+
+    .caixa_footer{
+        width: 100%;
+        flex-direction: row;
+    }
+    .logozap {
+        margin-right: 5%;
+        margin-bottom: 2%;
+    }
+}
+@media screen and (max-width:599px) {
+    html, body{
+        margin:0px !important;
+        padding: 0px !important;
+     }
+    .caixa{
+        width: 55vw;
+        flex-direction: row;
+    }
+    p{
+        font-size: 13px;
+    }
+    .botao {
+        margin: 0px;
+        width: 60px;
+        height: 25px;
+        color: white;
+        background-color: #DA811A;
+        border:none;
+        border-radius: 5px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    header {
+        height: 200px;
+    }
+    header h2 {
+        font-size: clamp(0.1rem, 0.5rem + 0.6vw, 2rem);
+    }
+    .botao {
+        margin-left: 500px;
+    }
+    .logo{
+        width: auto;
+        height: 50%;
+
+    }
+    .foto_wellington {
+        border-radius: 100%;
+    }
+    .marcas{
+        width: 55vw;
+        margin-top: 1.5vw;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .img_marca {
+            width: 14vw;
+    margin-bottom: 1vw;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 50%;
+    }
+    input {
+        display: block;
+        margin-right: 1.2vw !important;
+        width: 30vw;
+        margin-bottom: 3vw !important;
+    }
+
+    .caixa_footer{
+        width: 100%;
+        flex-direction: row;
+    }
+    .logozap {
+        margin-right: 5%;
+        margin-bottom: 2%;
+    }
+}
+.forms {
+    overflow: hidden;
+}
