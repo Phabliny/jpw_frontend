@@ -53,7 +53,7 @@ const Login = ({ submitted, setSubmitted }) => {
             <div className="Auth-form-container">
               <div className="Auth-form">
                 <div className="Auth-form-content form-signin">
-                  <img src="../../img/logo_JPW.png" className="login-logo"/>
+                  <img src="../../img/jpw.png" className="login-logo"/>
                   <h3 className="Auth-form-title">Faça o Login</h3>
                   <div className="form-group mt-3">
                     <label>Usuário</label>
