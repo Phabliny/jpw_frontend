@@ -61,9 +61,9 @@ const NovoCliente = () => {
         nome: cliente.nome,
         telefone: tel
       };
-      console.log(data);
+      console.log(JSON.stringify(data));
       api
-        .create(data)
+        .create(JSON.stringify(data))
         .then((response) => {
           setCliente({
             nome: response.data.nome,
