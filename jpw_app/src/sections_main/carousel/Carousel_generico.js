@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import carousel from '../../json/carousel.json'
-import Flip from '../../Flip'
+import Flip from './Flip'
 
 export default class Carousel_generico extends Component {
     constructor(props){
