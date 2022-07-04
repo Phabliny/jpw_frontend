@@ -15,12 +15,7 @@ const AcessoUser= ({ submitted }) => {
   };
 
   const exportar = () => {
-    axios({
-      url: "https://jpwbackend.herokuapp.com/jpw/clientes/export/excel",
-      method: "GET",
-      responseType: "blob",
-
-    }).then((res) => {
+    api.exportExcel().then((res) => {
       FileDownload(res.data, `Clientes_JPW.xlsx`)
     })
   }
