@@ -8,7 +8,7 @@ AxiosLogger.setGlobalConfig({
 });
 
 const httpClient = axios.create({
-  baseURL: "https://dashboard.heroku.com/apps/jpw",
+  baseURL: "https://jpwbackend.herokuapp.com/jpw",
   headers: {
     "Content-type": "application/json",
   },
@@ -16,7 +16,7 @@ const httpClient = axios.create({
 httpClient.interceptors.request.use(AxiosLogger.requestLogger, AxiosLogger.errorLogger);
 
 const token = axios.create({
-  baseURL: "https://dashboard.heroku.com/apps/",
+  baseURL: "https://jpwbackend.herokuapp.com/",
   headers: {
     "Content-type": "application/json",
   },
