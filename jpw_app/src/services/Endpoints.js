@@ -33,7 +33,7 @@ export const create = (data) => {
 };
 
 export const exportExcel = () =>{
-  return httpClient.get(`/clientes/export/excel`, { headers: { Authorization: "Bearer " + localStorage.getItem("jwtToken") } });
+  return httpClient.get(`/clientes/export/excel`, {responseType: 'blob', headers: { Authorization: "Bearer " + localStorage.getItem("jwtToken") } });
 }
 
 export const login = (data) => {
