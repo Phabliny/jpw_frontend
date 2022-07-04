@@ -166,7 +166,9 @@ iframe {
 .fundo_loja_movel {
     background-color: rgba(253, 214, 169, 0.7)
 }
-
+.carousel {
+    height: 47vh;
+}
 @media screen and (min-width: 600px) {
     .botao {
         display: inline-block;
