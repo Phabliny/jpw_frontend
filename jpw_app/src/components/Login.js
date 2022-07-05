@@ -2,6 +2,8 @@ import React, {useEffect, useState } from "react";
 import * as api from "../services/Endpoints";
 import '../css/login.css'
 import AcessoUser from './AcessoUser'
+import swal from 'sweetalert2';
+import 'animate.css';
 
 const Login = ({ submitted, setSubmitted }) => {
 
@@ -10,7 +12,7 @@ const Login = ({ submitted, setSubmitted }) => {
     senha: "",
   };
   const [user, setUser] = useState(estadoInicial);
-  const [erro, setErro] = useState("");
+  const [setErro] = useState("");
   
   const trataCampo = (event) => {
     const { name, value } = event.target;
@@ -33,7 +35,15 @@ const Login = ({ submitted, setSubmitted }) => {
         localStorage.setItem("jwtToken", response.data);
       })
       .catch((e) => {
-        console.log("Erro: -------------------------- " + e);
+        swal.fire({
+          title: 'Usuário ou senha incorretos',
+          showClass: {
+            popup: 'animate__animated animate__fadeInDown'
+          },
+          hideClass: {
+            popup: 'animate__animated animate__fadeOutUp'
+          }
+        })
         setErro("Usuário e/ou senha errado(s)");
       });
   };
@@ -54,7 +64,7 @@ const Login = ({ submitted, setSubmitted }) => {
               <div className="Auth-form">
                 <div className="Auth-form-content form-signin">
                   <img src="../../img/jpw.png" className="login-logo"/>
-                  <h3 className="Auth-form-title">Faça o Login</h3>
+                  <h3 className="Auth-form-title ml">Faça o Login</h3>
                   <div className="form-group mt-3">
                     <label>Usuário</label>
                     <input
