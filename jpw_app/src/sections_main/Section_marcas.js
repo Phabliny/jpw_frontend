@@ -4,7 +4,7 @@ export default class Section_marcas extends Component {
     render() {
         return (
             <div class="container py-sm-1 py-md-3 py-lg-5">
-                <div class="row justify-content-center align-items-center py-5">
+                <div class="row justify-content-center align-items-center py-5 py-sm-1 py-md-3">
                     <h1>PRINCIPAIS MARCAS</h1>
                     <h2>(TRABALHAMOS COM AS MELHORES MARCAS DO MERCADO)</h2>
                     <div class="marcas d-flex flex-row justify-content-center align-items-center flex-wrap mt-3 col-10 ">
