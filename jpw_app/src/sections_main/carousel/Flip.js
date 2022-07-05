@@ -8,11 +8,11 @@ class Flip extends Component {
                 <div class={estilo.flipCard}>
                     <div class={estilo.flipCardInner}>
                         <div class={estilo.flipCardFront}>
-                            <img src="../../../public/img/vidracaria.png" width="200" height="200" alt=""/>
+                            <img src="../img/produtos/broca.jpg" width="200" height="200" alt=""/>
                             <div className={estilo.frontside}>vidracaria</div>
                         </div>
                         <div class={estilo.flipCardBack}>
-                            <img src="../../../public/img/marmoaria.png" width="200" height="200"/>
+                            <img src="../img/produtos/broca.jpg" width="200" height="200"/>
                             <div className={estilo.backside}>marmoaria</div>
                         </div>
                     </div>
