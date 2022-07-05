@@ -14,20 +14,7 @@ export default class Header extends Component {
             <a href='https://wa.me/5534984417989?text=Desejo%20fazer%20um%20orçamento' target="_blank" rel="noopener noreferrer"><img src='../img/zap.png' class='logozap'></img></a>
           </div>
         </header>
-        <nav class="none">
-            <section>
-              <div class="nav">
-                <ul class="radial-nav">
-                  <li data-content="js"><a href="">Sobre a empresa</a></li>
-                  <li data-content="css"><a href="#">Nossos produtos</a></li>
-                  <li data-content="html5"><a href="#">Principais marcas</a></li>
-                  <li data-content="jade"><a href="#">Novidade! - Loja movel</a></li>
-                  <li data-content="git"><a href="#">Posso te ajudar</a></li>
-                </ul>
-              </div>
-              </section>
-            </nav>
-          </div>
-          )
+      </div>
+    )
   }
 }
