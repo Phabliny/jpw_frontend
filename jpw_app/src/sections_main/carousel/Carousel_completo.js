@@ -6,9 +6,9 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 class Carousel_completo extends Component {
     render() {
         return (
-            <div class="col-10">
+            <div class="col-10 carousel">
                 <Carousel infiniteLoop useKeyboardArrows autoPlay showThumbs={false} showStatus={false} 
-                stopOnHover={true} showArrows={true} transitionTime={5000}>
+                stopOnHover={true} showArrows={true} transitionTime={3000}>
                 <div class="item">
                     <Carousel_generico id="0"/>
                 </div>
