@@ -5,14 +5,14 @@ class Flip extends Component {
     render() {
         return (
             <>
-                <div class={estilo.flipCard}>
-                    <div class={estilo.flipCardInner}>
-                        <div class={estilo.flipCardFront}>
-                            <img src="../img/produtos/broca.jpg" width="200" height="200" alt=""/>
+                <div className={estilo.flipCard}>
+                    <div className={estilo.flipCardInner}>
+                        <div className={estilo.flipCardFront}>
+                            <img src="../img/produtos/broca.jpg" width="100" height="200" alt=""/>
                             <div className={estilo.frontside}>RICKS</div>
                         </div>
                         <div class={estilo.flipCardBack}>
-                            <img src="../img/produtos/broca.jpg" width="200" height="200"/>
+                            <img src="../img/produtos/broca.jpg" width="100" height="200"/>
                             <div className={estilo.backside}>ROCKS</div>
                         </div>
                     </div>
