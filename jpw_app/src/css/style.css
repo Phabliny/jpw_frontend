@@ -2,61 +2,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
 
 * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box; 
     font-size: clamp(1em, 0.1em + 1vw, 1.5em);
-}
-
-/*======================================= Header ==============================================*/
-header{
-    background-image: url('../../public/img/fundo_header.png');
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    height: 90vh;
-    text-align: center;
-    background-size: cover;    
+    /* font-family: 'Raleway', sans-serif; */
+    /* text-align: justify; */
 }
 header h2 {
     font-size: clamp(0.2rem, 1rem + 0.75vw, 2rem);
   }
+.pprodut{
+    margin-left: 22%;
+    width: 60%;
+}
+header{
+    background-image: url('../../public/img/fundo_header.png');
+    padding: 0;
+    width: auto;
+    height: auto;
+    margin: 0;
+    max-width: 100%;
+    text-align: center;
+    background-size: cover;    
+}
 header div {
-    width: 50vw;
-    height: 90vh;
     background-color: rgba(255, 255, 255, 0.9);
     margin-left: auto;
     margin-right: auto;
 }
-header img{
-    margin-top: 4vw;
-}
-header h2{
-    margin-top: 1vw;
-    margin-bottom: 1vw;
-}
-.confiraAqui {
-    font-weight: bold;
-    margin-top: 5vh;
-    padding: 15px 10px;
-    width: 30vw !important;
-    color: white;
-    border:none;
-    border-radius: 5px;
-    font-size: 25px;
-    background-color: #DA811A;
-
-}
-
-/*======================================= Main ==============================================*/
 .container {
     padding-top: 3vh;
     padding-bottom: 3vh;
 }
-
-
 main h1{
     font-family: 'Playfair Display SC', serif;
     font-size: clamp(0.1rem, 1rem + 2.1vw, 2rem);
@@ -95,10 +76,17 @@ p {
 }
 .texto-carrosel{
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.9);
+    top: 48%;
+    left: 56%;
+    transform: translate(-60%, -50%);
+    background-color: rgba(255, 255, 255, 0.603);
+    width: 70%;
+    list-style: none;
+    padding: 0px;
+}
+.myt {
+    margin-top: 5% !important;
+    margin-bottom: 2.5rem
 }
 .img_carrosel{
     position: relative;
@@ -110,8 +98,8 @@ p {
 }
 .botao {
     margin: 0px;
-    width: 80px;
-    height: 30px;
+    width: 15%;
+    height: 30%;
     color: white;
     background-color: #DA811A;
     border:none;
@@ -129,6 +117,24 @@ input {
 footer{
     background-color: orange;
 }
+.chek {
+    display: flex;
+    font-size: 8px;
+}
+.chek > .termo{
+    width: 5%;
+    margin-right: 5%;
+}
+.centralizar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.linkForm{
+    text-decoration: none;
+    font-weight: bolder;
+    color: black;
+}
 .caixa_footer{
     display: flex;
     flex-direction: column;
@@ -136,6 +142,7 @@ footer{
 }
 .img_van{
     width: 100%;
+    margin-bottom: 7%;
 }
 .elemento_footer {
     display: flex;
@@ -170,9 +177,6 @@ footer{
 .fim_footer p{
     color: white;
 }
-.none{
-    display: flex;    
-}
 .logozap {
     float: right;
     position: fixed;
@@ -183,6 +187,9 @@ footer{
     right:0;
     clear:right
 }
+.flexwrap {
+    flex-wrap: wrap;
+}
 iframe {
     position: static;
 }
@@ -192,36 +199,80 @@ iframe {
 .fundo_loja_movel {
     background-color: rgba(253, 214, 169, 0.7)
 }
-.carousel {
-    height: 47vh;
+@media screen and (max-width: 768px){
+    .pprodut{
+        margin-left: 17%;
+        width: 60%;
+    }
 }
 @media screen and (min-width: 600px) {
     .botao {
         display: inline-block;
     }
+    .confiraAqui {
+        font-weight: bold;
+        margin-top: 5vh;
+        padding: 15px 10px;
+        width: 30vw !important;
+        color: white;
+        border:none;
+        border-radius: 5px;
+        font-size: 25px;
+        background-color: #DA811A;
+    
+    }
     .mapa {
         width:100%;
+    }
+    .forms {
+        overflow: hidden;
+        margin: 0px !important;
+        padding: 20px;
+    }
+   .forms-inp {
+        margin-right: 10px;
+
+   }
+    .img_marca {
+        width: 35vw;
+        margin: 0 0 5vw 0;
+        max-width: 45%;
     }
     .logozap {
         margin-right: 3%;
         margin-bottom: 4%;
     }
 }
-
+@media screen and (min-width: 1600px){
+    .foto_wellington {
+        border-radius: 0%;
+        margin-bottom: 5%;
+        width: 50% !important;
+        margin: 0px;
+        margin-bottom: 15px;
+    }
+    .img_van{
+        width: 100%;
+        margin-bottom: 7%;
+        margin-right: 7%;
+    }
+    .flexwrap{
+        flex-wrap: nowrap;
+    }
+}
 @media screen and (min-width:990px) {
     .container {
         padding-top: 10vh;
         padding-bottom: 10vh;
     }
+
     .caixa{
         width: 55vw;
         flex-direction: row;
     }
-    .none{
-        display: none;
-    }
     .foto_wellington {
         border-radius: 0%;
+        width: 25% !important;
     }
     .marcas{
         width: 55vw;
@@ -261,12 +312,42 @@ iframe {
         margin:0px !important;
         padding: 0px !important;
      }
+     .chek p {
+        font-size: 8px;
+     }
+     .textinput{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 90%;
+        text-align: center;
+    }
+    .confiraAqui {
+        font-weight: bold;
+        margin-top: 5%;
+        padding: auto;
+        width: 100% !important;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 10px;
+        background-color: #DA811A;
+        margin-left: 0px !important;
+    }
+    .abotao {
+        width: 50%;
+        text-decoration: none;
+    }
     .caixa{
         width: 55vw;
         flex-direction: row;
     }
+    .padding {
+        padding-top: 1rem!important;
+        padding-bottom: 1rem!important;
+    }
     p{
-        font-size: 13px;
+        font-size: clamp(0.3rem, 0.8rem + 0.30vw, 1.3rem);
     }
     .botao {
         margin: 0px;
@@ -308,11 +389,11 @@ iframe {
         align-items: center;
     }
     .img_marca {
-        width: 14vw;
-        margin-bottom: 1vw;
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 50%;
+            width: 12vw;
+    margin-bottom: 1vw;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 45%;
     }
     input {
         display: block;
@@ -329,7 +410,53 @@ iframe {
         margin-right: 5%;
         margin-bottom: 2%;
     }
+    .login-logo{
+        width: 90%;
+        margin: 0px;
+    }
+    .pprodut{
+        margin-left: 17%;
+        width: 60%;
+    }
 }
 .forms {
     overflow: hidden;
+    margin-top: 7%;
+}
+.ml {
+    margin-left: 5%;
+}
+.textinput{
+    text-align: center;
+}
+.padnone {
+    padding: 0px !important;
+}
+ol {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    counter-reset: li;
+}
+.divcliente {
+    text-align: center;
+}
+.liCli{
+    margin-top: 2%;
+}
+
+ol div h3 {
+    margin-bottom: 5%;
+}
+::marker{
+    content: counter(li);
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    border: 1px solid black;
+    background-color: black;
+}
+li {
+    counter-increment: li;
 }
