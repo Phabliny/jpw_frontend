@@ -12,7 +12,7 @@ export default class Header extends Component {
             <a href='https://wa.me/5534984417989?text=Desejo%20fazer%20um%20orçamento' target="_blank" rel="noopener noreferrer"><img src='../img/zap.png' class='logozap' id="img"></img></a>
           </div>
         </header>
-       </div>
-     )
+          </div>
+          )
   }
 }
