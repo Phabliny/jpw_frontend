@@ -4,8 +4,8 @@ export default class Section_loja_movel extends Component {
     render() {
         return (
             <div class="fundo_loja_movel">
-                <div class="container py-sm-1 py-md-3 py-lg-5">
-                    <div class="row justify-content-center align-items-center py-5">
+                <div class="container py-sm-1 py-md-3 py-lg-5 padnone">
+                    <div class="row justify-content-center align-items-center py-5 py-sm-1 py-md-3">
                         <h1>NOVIDADE - LOJA MÓVEL</h1>
                         <h2>(LEVANDO AOS NOSSOS CLIENTES UM ATENDIMENTO PERSONALIZADO)</h2>
                         <div class="d-flex flex-row justify-content-center align-items-center flex-wrap col-lg-10 mt-3 col-8 p-1">
