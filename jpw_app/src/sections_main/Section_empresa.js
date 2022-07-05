@@ -3,11 +3,11 @@ import React, { Component } from 'react';
 export default class Section_empresa extends Component {
     render() {
         return (
-            <div class="container py-sm-1 py-md-3 py-lg-5">
-                <div class="row justify-content-center align-items-center py-4">
+            <div class="container py-sm-1 py-md-3 py-lg-5 padding">
+                <div class="row justify-content-center align-items-center py-4 py-sm-1 py-md-3">
                     <h1>SOBRE A EMPRESA</h1>
                     <h2>(CONHEÇA A NOSSA EMPRESA)</h2>
-                    <div class="d-flex flex-row justify-content-center align-items-center flex-wrap py-sm-1 col-lg-10 mt-3 col-10">
+                    <div class="d-flex flex-row justify-content-center align-items-center flexwrap py-sm-1 col-lg-10 mt-3 col-10">
                         <img class="col-sm-8 col-md-6 col-lg-3 col-6 foto_wellington" src="../../img/foto.jpeg" />
                         <div class="col-lg-8 mx-3 px-2 my-3">
                             <p class="text-justify">Somos um empresa localizada na cidade de Uberlândia (MG) com foco na venda de  produtos para os seguintes seguimentos: <spam class="negrito">marcenaria</spam>, <spam class="negrito">marmoraria</spam>, <spam class="negrito">serralheria</spam> e <spam class="negrito">vidraçaria.</spam></p>
