@@ -3,7 +3,6 @@ import * as api from "../services/Endpoints";
 import '../css/login.css'
 import AcessoUser from './AcessoUser'
 import swal from 'sweetalert2';
-import 'animate.css';
 
 const Login = ({ submitted, setSubmitted }) => {
 
@@ -37,12 +36,9 @@ const Login = ({ submitted, setSubmitted }) => {
       .catch((e) => {
         swal.fire({
           title: 'Usuário ou senha incorretos',
-          showClass: {
-            popup: 'animate__animated animate__fadeInDown'
-          },
-          hideClass: {
-            popup: 'animate__animated animate__fadeOutUp'
-          }
+           icon: 'error',
+          text: 'Favor informa o usuario e a senha corretos',
+          confirmButtonColor: "#ffa600e6"
         })
         setErro("Usuário e/ou senha errado(s)");
       });
