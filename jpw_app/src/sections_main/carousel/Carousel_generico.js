@@ -7,17 +7,11 @@ export default class Carousel_generico extends Component {
         super(props);
         this.state = carousel
     }
-
-    /* verTamanho = () => {
-        const largura = window.screen.width;
-        if(largura < "600px") {
-        }
-    }*/
-    
     render() {
         return (
             <div>
-                <div className="d-flex justify-content-around">
+                <div className="d-flex">
+                    <Flip/>
                     <Flip/>
                     <Flip/>
                     <Flip/>
