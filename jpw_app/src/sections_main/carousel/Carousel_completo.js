@@ -8,7 +8,7 @@ class Carousel_completo extends Component {
         return (
             <>
                 <div class="col-10 carousel carousel_grande">
-                    <Carousel infiniteLoop useKeyboardArrows autoPlay showThumbs={false} showStatus={false}  stopOnHover={true} showArrows={true} transitionTime={5000}>
+                    <Carousel infiniteLoop useKeyboardArrows autoPlay showThumbs={false} showStatus={false}  stopOnHover={true} showArrows={true} transitionTime={10000}>
                     <div class="item d-flex justify-content-between align-center">
                         <Flip id="0"/>
                         <Flip id="1"/>
@@ -24,7 +24,7 @@ class Carousel_completo extends Component {
                     </Carousel>
                 </div>
                 <div class="col-10 carousel carousel_medio">
-                    <Carousel infiniteLoop useKeyboardArrows autoPlay showThumbs={false} showStatus={false}  stopOnHover={true} showArrows={true} transitionTime={5000}>
+                    <Carousel infiniteLoop useKeyboardArrows autoPlay showThumbs={false} showStatus={false}  stopOnHover={true} showArrows={true} transitionTime={10000}>
                     <div class="item d-flex justify-content-between align-center">
                         <Flip id="0"/>
                         <Flip id="1"/>
@@ -38,7 +38,7 @@ class Carousel_completo extends Component {
                     </Carousel>
                 </div>
                 <div class="col-10 carousel carousel_pequeno">
-                    <Carousel infiniteLoop useKeyboardArrows autoPlay showThumbs={false} showStatus={false}  stopOnHover={true} showArrows={true} transitionTime={5000}>
+                    <Carousel infiniteLoop useKeyboardArrows autoPlay showThumbs={false} showStatus={false}  stopOnHover={true} showArrows={true} transitionTime={10000}>
                     <div class="item d-flex justify-content-between align-center">
                         <Flip id="0"/>
                     </div>
