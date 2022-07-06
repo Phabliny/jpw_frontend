@@ -12,6 +12,9 @@
   /* font-family: 'Raleway', sans-serif; */
   /* text-align: justify; */
 }
+p {
+  text-align: justify;
+}
 header h2 {
   font-size: clamp(0.2rem, 1rem + 0.75vw, 2rem);
 }
@@ -311,6 +314,9 @@ ol div h3 {
 }
 li {
   counter-increment: li;
+}
+.carousel {
+  height: 43vh;
 }
 .carousel_grande{
   display:none;

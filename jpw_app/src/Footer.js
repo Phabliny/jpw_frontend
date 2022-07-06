@@ -14,7 +14,7 @@ export default class Footer extends Component {
                     </div>
                 </div>
                 
-                <div class="fim_footer p-1">
+                <div class="fim_footer p-0">
                     <span>@Todos os direitos reservados</span>
                 </div>
             </footer>
