@@ -106,7 +106,7 @@ const NovoCliente = () => {
           <div className="centralizar">
           <div class="chek">
            <input className="termo" type="checkbox" id="chekbox"></input>
-            <p>Li e concordo com os temos de uso, para saber mais faça o download do mesmo através desse <a href="/termo.pdf" download>link</a></p>
+            <p>Li e concordo com os temos de uso, para saber mais faça o download do mesmo através desse <a href="/jpw_frontend/jpw_app/src/components/termo.pdf" download>link</a></p>
           </div>
           <button onClick={enviarCliente} className="botao mx-2 text-center">
             Enviar
