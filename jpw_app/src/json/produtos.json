@@ -1,0 +1,44 @@
+{
+    "produtos": [
+        {
+            "img": "../../img/produtos/disco.png",
+            "titulo": "Discos",
+            "descricao": "Corte, Flap, desbaste"
+        },
+        {
+            "img": "../../img/produtos/parafuso.jpg",
+            "titulo": "Parafusos",
+            "descricao": " Brocantes, Chipboard, autoatarrantes, pomta guia, Inox"
+        },
+        {
+            "img": "../../img/produtos/bonder.jpg",
+            "titulo": "Colas",
+            "descricao": "Contato, PVA, Bonder, Hot Melt"
+        },
+        {
+            "img": "../../img/produtos/dobradiça.jpg",
+            "titulo": "Dobradiças",
+            "descricao": "Comum, Soft Closing"
+        },
+        {
+            "img": "../../img/produtos/corredica.jpg",
+            "titulo": "Corrediças",
+            "descricao": "Light, Normal, Soft Closing, Invisíveis"
+        },
+        {
+            "img": "../../img/produtos/broca.jpg",
+            "titulo": "Brocas",
+            "descricao": "SDS, Aço Rápido, Videa"
+        },
+        {
+            "img": "../../img/produtos/silicone.jpg",
+            "titulo": "Silicones",
+            "descricao": "Alta Temperatura, Acéticos Coloridos, Neutros Coloridos, Fixa Espelho, Base D`água, Aquário"
+        },
+        {
+            "img": "../../img/produtos/limpa-contatos.jpg",
+            "titulo": "Spray",
+            "descricao": "Limpa Contato, Desengripante, Tinta Spray, Espuma Expansiva"
+        }
+    ]
+}

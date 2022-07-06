@@ -85,7 +85,7 @@ const NovoCliente = () => {
     }
   };
   return (
-    <div className="submit-form mt-3">
+    <div className="submit-form">
       {submitted ? (
         <div>
           <h4>Cliente cadastrado com sucesso!</h4>
@@ -123,7 +123,7 @@ const NovoCliente = () => {
               <input className="termo" type="checkbox" id="chekbox"></input>
               <p>
                 Li e concordo com os temos de uso, para saber mais faça o
-                download do mesmo através desse
+                download do mesmo através desse 
                 <a
                   href="/jpw_frontend/jpw_app/src/components/termo.pdf"
                   download
