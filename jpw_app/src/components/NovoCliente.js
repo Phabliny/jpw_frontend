@@ -43,13 +43,6 @@ const NovoCliente = () => {
         text: "O campo nome precisa ter mais de 1 letra, favor preenche-lo corretamente",
         confirmButtonColor: "#ffa600e6",
       });
-    } else if (cliente.telefone.length > 12){
-      swal.fire({
-        title: "Algo deu errado",
-        icon: "error",
-        text: "O campo telefone está com a quantidade de dígitos incorreta, favor preenche-lo corretamente",
-        confirmButtonColor: "#ffa600e6",
-      });
     } else if (!document.getElementById("chekbox").checked) {
       swal.fire({
         title: "Algo deu errado",
