@@ -324,14 +324,6 @@ ol {
 ol div h3 {
   margin-bottom: 5%;
 }
-::marker {
-  content: counter(li);
-  display: inline-block;
-  width: 1em;
-  margin-left: -1em;
-  border: 1px solid black;
-  background-color: black;
-}
 li {
   counter-increment: li;
 }
