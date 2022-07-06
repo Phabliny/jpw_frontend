@@ -123,7 +123,7 @@ const NovoCliente = () => {
           <div className="centralizar">
             <div class="chek">
               <input className="termo" type="checkbox" id="chekbox"></input>
-               <p>Li e concordo com os temos de uso, para saber mais faça o download do mesmo através desse <Link to="/termo" target="_blank" class="linkTermo">link</Link></p>
+               <p class="ptermo">Li e concordo com os temos de uso, para saber mais faça o download do mesmo através desse <Link to="/termo" target="_blank" class="linkTermo">link</Link></p>
             </div>
             <button onClick={enviarCliente} className="botao mx-2 text-center">
               Enviar
