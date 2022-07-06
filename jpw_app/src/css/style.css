@@ -24,7 +24,7 @@ header h2 {
   width: 60%;
 }
 ::marker {
-    display: none;
+    display: none !important;
 }
 header {
   background-image: url("../../public/img/fundo_header.png");
