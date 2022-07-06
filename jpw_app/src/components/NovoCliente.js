@@ -36,18 +36,18 @@ const NovoCliente = () => {
 
   const enviarCliente = () => {
     console.log(document.getElementById("chekbox").checked);
-    if (cliente.telefone.length < 12) {
-      swal.fire({
-        title: "Algo deu errado",
-        icon: "error",
-        text: "O campo telefone precisa ter mais de 10 números, favor preenche-lo corretamente",
-        confirmButtonColor: "#ffa600e6",
-      });
-    } else if (cliente.nome.length < 1) {
+    if (cliente.nome.length < 1) {
       swal.fire({
         title: "Algo deu errado",
         icon: "error",
         text: "O campo nome precisa ter mais de 1 letra, favor preenche-lo corretamente",
+        confirmButtonColor: "#ffa600e6",
+      });
+    } else if ((cliente.telefone.length < 10)||(cliente.telefone.length > 12)){
+      swal.fire({
+        title: "Algo deu errado",
+        icon: "error",
+        text: "O campo telefone está coma quantidade de dígitos incorreta, favor preenche-lo corretamente",
         confirmButtonColor: "#ffa600e6",
       });
     } else if (!document.getElementById("chekbox").checked) {
@@ -91,7 +91,7 @@ const NovoCliente = () => {
       {submitted ? (
         <div>
           <h4>Cliente cadastrado com sucesso!</h4>
-          <button className="btn btn-success botao_form" onClick={novo}>
+          <button className="btn btn-success botao_form botao" onClick={novo}>
             Novo
           </button>
         </div>
@@ -136,3 +136,4 @@ const NovoCliente = () => {
 };
 
 export default NovoCliente;
+

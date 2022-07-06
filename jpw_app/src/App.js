@@ -12,7 +12,7 @@ const App = () => {
     <div>
       <Router>
             <Routes>
-              <Route path="/token" element={<Login submitted={submitted} setSubmitted={setSubmitted}/>}></Route>
+              <Route path="/admin" element={<Login submitted={submitted} setSubmitted={setSubmitted}/>}></Route>
               <Route path="/" element={<Body />}></Route>
               <Route path="/termo" element={<Termo />}></Route>
             </Routes>

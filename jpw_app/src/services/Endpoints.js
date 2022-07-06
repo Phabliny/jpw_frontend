@@ -34,13 +34,13 @@ token.interceptors.response.use(
 );
 
 export const getAll = () => {
-  return httpClient.get("/cliente", {
+  return httpClient.get("/clientes", {
     headers: { Authorization: "Bearer " + localStorage.getItem("jwtToken") },
   });
 };
 
 export const create = (data) => {
-  return httpClient.post("/cliente", data);
+  return httpClient.post("/clientes", data);
 };
 
 export const exportExcel = () => {
@@ -52,7 +52,7 @@ export const exportExcel = () => {
 
 export const login = (data) => {
   return token.post(
-    "/token",
+    "/admin",
     {},
     {
       auth: {
