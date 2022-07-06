@@ -13,7 +13,10 @@ const httpClient = axios.create({
     "Content-type": "application/json",
   },
 });
-httpClient.interceptors.request.use(AxiosLogger.requestLogger, AxiosLogger.errorLogger);
+httpClient.interceptors.request.use(
+  AxiosLogger.requestLogger,
+  AxiosLogger.errorLogger
+);
 
 const token = axios.create({
   baseURL: "https://jpwbackend.herokuapp.com/",
@@ -21,20 +24,31 @@ const token = axios.create({
     "Content-type": "application/json",
   },
 });
-token.interceptors.request.use(AxiosLogger.requestLogger, AxiosLogger.errorLogger);
-token.interceptors.response.use(AxiosLogger.responseLogger, AxiosLogger.errorLogger);
+token.interceptors.request.use(
+  AxiosLogger.requestLogger,
+  AxiosLogger.errorLogger
+);
+token.interceptors.response.use(
+  AxiosLogger.responseLogger,
+  AxiosLogger.errorLogger
+);
 
 export const getAll = () => {
-  return httpClient.get("/cliente", { headers: { Authorization: "Bearer " + localStorage.getItem("jwtToken") } });
+  return httpClient.get("/cliente", {
+    headers: { Authorization: "Bearer " + localStorage.getItem("jwtToken") },
+  });
 };
 
 export const create = (data) => {
   return httpClient.post("/cliente", data);
 };
 
-export const exportExcel = () =>{
-  return httpClient.get(`/clientes/export/excel`, {responseType: 'blob', headers: { Authorization: "Bearer " + localStorage.getItem("jwtToken") } });
-}
+export const exportExcel = () => {
+  return httpClient.get(`/clientes/export/excel`, {
+    responseType: "blob",
+    headers: { Authorization: "Bearer " + localStorage.getItem("jwtToken") },
+  });
+};
 
 export const login = (data) => {
   return token.post(

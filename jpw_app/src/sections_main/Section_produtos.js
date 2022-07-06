@@ -9,7 +9,7 @@ export default class Section_produtos extends Component {
                     <div class="row justify-content-center align-items-center py-5">
                         <h1>NOSSOS PRODUTOS</h1>
                         <h2>(TEMOS UMA VARIEDADE GRANDE DE OUTROS PRODUTOS)</h2>
-                        <div class="d-flex flex-row justify-content-center align-items-center flex-wrap col-lg-10">
+                        <div class="d-flex flex-row justify-content-center align-items-center flex-wrap col-lg-10 mt-3">
                             <Carousel_completo/>
                         </div>
                     </div>
