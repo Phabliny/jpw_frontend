@@ -135,7 +135,7 @@ footer {
 }
 .chek > .termo {
   width: 5%;
-  margin-right: 5%;
+  margin-right: 2%;
 }
 
 .chek input {
@@ -345,6 +345,9 @@ li {
     margin: 0px !important;
     padding: 0px !important;
   }
+  .chek > .termo {
+        margin-bottom: 5% !important;
+     }
   .chek p {
     font-size: 8px;
   }
@@ -466,6 +469,9 @@ li {
     padding-top: 10vh;
     padding-bottom: 10vh;
   }
+  .ptermo {
+        width: 400px;
+    }
   .caixa {
     width: 55vw;
     flex-direction: row;
