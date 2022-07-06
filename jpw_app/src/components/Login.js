@@ -1,66 +1,94 @@
-import { useEffect, useState } from "react";
-import React from 'react'
+import React, {useEffect, useState } from "react";
 import * as api from "../services/Endpoints";
 import '../css/login.css'
-import FooterHome from '../sections_main/footer/FooterHome'
- 
-const AcessoUser= ({ submitted }) => {
-  const [clientes, setClientes] = useState([]);
-  const FileDownload = require('js-file-download');
+import AcessoUser from './AcessoUser'
 
-  const buscarClientes = () => {
-    api.getAll().then((resp) => {
-      console.log(resp);
-      setClientes(resp.data);
-    });
+const Login = ({ submitted, setSubmitted }) => {
+
+  const estadoInicial = {
+    nome: "",
+    senha: "",
+  };
+  const [user, setUser] = useState(estadoInicial);
+  const [erro, setErro] = useState("");
+  
+  const trataCampo = (event) => {
+    const { name, value } = event.target;
+    setUser({ ...user, [name]: value });
   };
 
-  const exportar = () => {
-    api.exportExcel().then((res) => {
-      FileDownload(res.data, `Clientes_JPW.xlsx`)
-    })
-  }
+  useEffect(() => {
+    console.log("useEffect (" + localStorage.getItem("jwtToken")+")");
+    if (localStorage.getItem("jwtToken") !== null) setSubmitted(true);
+    else setSubmitted(false);
+  }, []);
+
+  const logar = () => {
+    console.log(user);
+    api
+      .login(user)
+      .then((response) => {
+        setSubmitted(true);
+        console.log(response.data);
+        localStorage.setItem("jwtToken", response.data);
+      })
+      .catch((e) => {
+        console.log("Erro: -------------------------- " + e);
+        setErro("Usuário e/ou senha errado(s)");
+      });
+  };
 
   const logout = () => {
     console.log("saindo ....")
     localStorage.removeItem("jwtToken");
-    submitted(false);
+    setSubmitted(false);
   };
-
-  useEffect(() => {
-    setClientes([]);
-  }, [submitted]);
-
-
   return (
-    <>
-    <nav className="d-flex container justify-content-between">
-      <img src="../../img/jpw.png" className="col-sm-12 col-md-8 col-lg-2" /> 
-      <button onClick={logout} className="botao mx-2 p-1">Sair</button>
-    </nav>
-    
-          <button onClick={buscarClientes} className="botao mx-2 mb-3" style={{ width: "200px" }}>
-            Buscar clientes
-          </button>
-          <button onClick={exportar} className="botao mx-2">
-            Exportar
-          </button>
-      {submitted && clientes.length === 0 && (
-        <>
-        </>
-      )}
-      {submitted && (
-        <ol>
-          {clientes.map((cliente) => (
-            <li>
-              {cliente.nome} - {cliente.localDateTime}
-            </li>
-          ))}
-        </ol>
-      )}
-      <FooterHome className="position-fixed"/>
-    </>
-  );
+        <div className="submit-form">
+          {submitted ? (
+            <div>
+              <AcessoUser submitted={setSubmitted}/>
+            </div>
+          ) : (
+            <div className="Auth-form-container">
+              <div className="Auth-form">
+                <div className="Auth-form-content form-signin">
+                  <img src="../../img/jpw.png" className="login-logo"/>
+                  <h3 className="Auth-form-title">Faça o Login</h3>
+                  <div className="form-group mt-3">
+                    <label>Usuário</label>
+                    <input
+                      type="text"
+                      className="form-control mt-1 input-login"
+                      placeholder="Digite o nome do usuário"
+                      id="nome" 
+                      required value={user.nome} onChange={trataCampo} 
+                      name="nome" 
+                    />
+                  </div>
+                  <div className="form-group mt-1">
+                    <label>Senha</label>
+                    <input
+                      type="password"
+                      className="form-control mt-1 input-login"
+                      placeholder="Digite a sua senha"
+                      id="senha" 
+                      required value={user.senha} 
+                      onChange={trataCampo} 
+                      name="senha"
+                    />
+                  </div>
+                  <div className="d-grid gap-2">
+                    <button onClick={logar} className="btn btn-warning">
+                      Entrar
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+              )}
+            </div>
+  ); 
 };
 
-export default AcessoUser;
+export default Login;
