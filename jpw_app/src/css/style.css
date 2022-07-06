@@ -23,6 +23,9 @@ header h2 {
   margin-left: 22%;
   width: 60%;
 }
+::marker {
+    display: none;
+}
 header {
   background-image: url("../../public/img/fundo_header.png");
   padding: 0;
